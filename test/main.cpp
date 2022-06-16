@@ -1,4 +1,5 @@
 #include <systemc.h>
+#include <lz4xx.h>
 
 SC_MODULE (hello) {  // module named hello
   SC_CTOR (hello) {  //constructor phase, which is empty in this case

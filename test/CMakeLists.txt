@@ -1,3 +1,3 @@
 set(PROJECT_NAME test)
 add_executable(${PROJECT_NAME} main.cpp)
-target_link_libraries(${PROJECT_NAME} systemc)
+target_link_libraries(${PROJECT_NAME} systemc lz4xx)
