@@ -7,11 +7,15 @@ set -e
     cd build
     cmake ..
     cmake --build .
-    while getopts "t" flags; do
+    while getopts "ed" flags; do
         case $flags in
-            t) # Flag "-t" to tun tests
+            e) # Flag "-e" to run encoder
                 printf "\n\nRunning tests...\n\n"
-                ../build/test/test
+                ../build/test/encoder_testbench
+                ;;
+            d) # Flag "-d" to run decoder
+                printf "\n\nRunning tests...\n\n"
+                ../build/test/decoder_testbench
                 ;;
         esac
     done
